@@ -1,0 +1,121 @@
+  <!-- div.accordion{
+width:70%;
+margin:0 auto;
+}
+
+/* accordion heading */
+.accordion h4{
+font-size:26px;
+font-weight: normal;
+text-align: center;
+margin-bottom:0px;
+margin-top:0px;
+background-color:cornflowerblue;
+padding-top:7px;padding-bottom:7px;
+border:1px solid darkgrey;
+border-radius:3px;
+}
+.accordion h4:hover{
+cursor:pointer;
+}
+
+/* accordion section content */
+.accordion div{
+display:none;
+padding:10px;
+height:200px;
+line-height:20px;
+border:1px solid gray;
+border-radius:3px;
+}
+
+@media screen and (max-width:480px){
+.accordion{
+  width:100%;
+  margin:0;
+}
+} -->
+
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <title>JQuery Intro</title>
+      <script src="assignment4.js" type="text/javascript"></script>
+      <style>
+        html {
+          font-family: monaco;
+        }
+
+        h3 {
+          text-align:center;
+        }
+        h4 {
+          background-color: cornflowerblue;
+          padding: 10px;
+          width: 100%;
+        }
+        #listcontain {
+          position: relative;
+          height: 105px;
+        }
+        button {
+          padding:5px;
+          font-size:14px;
+          border-radius: 4px;
+          border: 2px solid cornflowerblue;
+        }
+
+      </style>
+    </head>
+    <body>
+      <h3>Please go through and fill out each section</h3>
+      <form name="myForm" action="" onsubmit="return(validate());">
+        <div id="accordion" class="accordion">
+
+          <h4 id="accordian1">Personal</h4>
+          <div id="accordianContent1" class="accordion-content">
+          <label for="fName">Full Name</label>
+            <input type="text"name="fName" id="fName">
+          <label for="age">How old are you?</label>
+            <input type="text" name="age" id="age">
+          <label for="fColor">What's your favorite color?</label>
+            <input type="text" name="fColor" id="fColor">
+          </div>
+
+          <h4 id="accordian2">School</h4>
+          <div id="accordianContent2" class="accordion-content">
+            <label for="fClass">What class do you like the most?</label>
+              <input type="text" name="fClass" id="fClass">
+            <label for="hClass">What class do you like the least?</label>
+              <input type="text" name="hClass" id="hClass">
+          </div>
+
+          <h4 id="accordian3">Hobbies</h4>
+          <div id="accordianContent3" class="accordion-content">
+              <label for="hobbyEntry">What are your hobbies?</label>
+
+            <input id="hobbyEntry" type="text">
+            <button for="hobbyEntry" id="hobby" onclick="addHobby()">Add Hobby</button>
+            <p>Your Hobbies:</p>
+            <!-- <div id="listcontain"> -->
+              <ul id="hobby-list"></ul>
+              <!-- <li name="list"></li> -->
+            <!-- </div> -->
+
+          </div>
+
+          <h4 id="accordian4">Music</h4>
+          <div id="accordianContent4" class="accordion-content">
+            <label for="music">What are your top 5 favorite artists/bands?</label>
+            <input type="text" id="music">
+
+          </div>
+
+          <br>
+  <button id="submit-Btn" onclick="validate()">Submit</button>
+        </div>
+
+        <!-- <input type="submit" id="submit" onclick="validate();"> -->
+      </form>
+    </body>
+  </html>
